@@ -7,9 +7,12 @@ package v1alpha1
 
 import (
 	"context"
+	"sort"
+
 	reference "github.com/crossplane/crossplane-runtime/pkg/reference"
 	v1alpha1 "github.com/linode/provider-linode/apis/instance/v1alpha1"
 	errors "github.com/pkg/errors"
+	"k8s.io/apimachinery/pkg/util/sets"
 	client "sigs.k8s.io/controller-runtime/pkg/client"
 )
 
@@ -107,7 +110,10 @@ func (mg *Firewall) ResolveReferences(ctx context.Context, c client.Reader) erro
 	if err != nil {
 		return errors.Wrap(err, "mg.Spec.ForProvider.Linodes")
 	}
-	mg.Spec.ForProvider.Linodes = reference.ToFloatPtrValues(mrsp.ResolvedValues)
+	mg.Spec.ForProvider.Linodes =  reference.ToFloatPtrValues(sets.List(sets.New(mrsp.ResolvedValues...)))
+	sort.Slice(mrsp.ResolvedReferences, func(i, j int) bool {
+		return mrsp.ResolvedReferences[i].Name < mrsp.ResolvedReferences[j].Name
+	})
 	mg.Spec.ForProvider.LinodesRefs = mrsp.ResolvedReferences
 
 	mrsp, err = r.ResolveMultiple(ctx, reference.MultiResolutionRequest{
@@ -123,7 +129,10 @@ func (mg *Firewall) ResolveReferences(ctx context.Context, c client.Reader) erro
 	if err != nil {
 		return errors.Wrap(err, "mg.Spec.InitProvider.Linodes")
 	}
-	mg.Spec.InitProvider.Linodes = reference.ToFloatPtrValues(mrsp.ResolvedValues)
+	mg.Spec.InitProvider.Linodes = reference.ToFloatPtrValues(sets.List(sets.New(mrsp.ResolvedValues...)))
+	sort.Slice(mrsp.ResolvedReferences, func(i, j int) bool {
+		return mrsp.ResolvedReferences[i].Name < mrsp.ResolvedReferences[j].Name
+	})
 	mg.Spec.InitProvider.LinodesRefs = mrsp.ResolvedReferences
 
 	return nil
