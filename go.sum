@@ -152,6 +152,8 @@ github.com/google/uuid v1.6.0 h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=
 github.com/google/uuid v1.6.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/guilhem/crossplane-runtime v1.16.1-0.20250116161626-a92ea4102aa4 h1:G2EDrMdIKB8NXmSVkZk5HC2A5JdHSf9OXHOGo4TjdJs=
 github.com/guilhem/crossplane-runtime v1.16.1-0.20250116161626-a92ea4102aa4/go.mod h1:Pz2tdGVMF6KDGzHZOkvKro0nKc8EzK0sb/nSA7pH4Dc=
+github.com/guilhem/terraform-provider-linode/v2 v2.0.0-20261012165628-6f8719a2a40a h1:FIXAOVKYQ8/nKtaQ9AsMdjxzg2XRVlgF1SzACMWUYRI=
+github.com/guilhem/terraform-provider-linode/v2 v2.0.0-20261012165628-6f8719a2a40a/go.mod h1:Zk/8eibQhCpkpPek0C8cjGQh6g8DUuh921Ov/fSNT0A=
 github.com/hashicorp/errwrap v1.0.0 h1:hLrqtEDnRye3+sgx6z4qVLNuviH3MR5aQ0ykNJa/UYA=
 github.com/hashicorp/errwrap v1.0.0/go.mod h1:YH+1FKiLXxHSkmPseP+kNlulaMuP3n2brvKWEqk/Jc4=
 github.com/hashicorp/go-checkpoint v0.5.0 h1:MFYpPZCnQqQTE18jFwSII6eUQrD/oxMFp3mlgcqk5mU=
@@ -239,8 +241,6 @@ github.com/linode/linodego v1.55.0 h1:ZMTRtTP4/4zwYdOKThge04JJIih03DXPDyVlHEmI/A
 github.com/linode/linodego v1.55.0/go.mod h1:LoQZ8hW8ZcXh/DJdYADwPCtVP8duyckLRGXwwwh55SU=
 github.com/linode/linodego/k8s v1.25.2 h1:PY6S0sAD3xANVvM9WY38bz9GqMTjIbytC8IJJ9Cv23o=
 github.com/linode/linodego/k8s v1.25.2/go.mod h1:DC1XCSRZRGsmaa/ggpDPSDUmOM6aK1bhSIP6+f9Cwhc=
-github.com/linode/terraform-provider-linode/v2 v2.41.2 h1:e2SRoCJE9v/Wt3YumbyLsMaU70RsAnqzZ3DnnU1HA7g=
-github.com/linode/terraform-provider-linode/v2 v2.41.2/go.mod h1:Zk/8eibQhCpkpPek0C8cjGQh6g8DUuh921Ov/fSNT0A=
 github.com/mailru/easyjson v0.7.7 h1:UGYAvKxe3sBsEDzO8ZeWOSlIQfWFlxbzLZe7hwFURr0=
 github.com/mailru/easyjson v0.7.7/go.mod h1:xzfreul335JAWq5oZzymOObrkdz5UnU4kGfJJLY9Nlc=
 github.com/mattn/go-colorable v0.1.9/go.mod h1:u6P/XSegPjTcexA+o6vUJrdnUu04hMope9wVRipJSqc=
