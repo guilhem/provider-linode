@@ -4,6 +4,9 @@ go 1.25.0
 
 replace github.com/crossplane/crossplane-runtime => github.com/guilhem/crossplane-runtime v1.16.1-0.20250116161626-a92ea4102aa4
 
+// Use the API load fixes from the fork of v2.41.2 without changing resource schemas.
+replace github.com/linode/terraform-provider-linode/v2 => github.com/guilhem/terraform-provider-linode/v2 v2.0.0-20261012170914-9875042b31d5
+
 require (
 	dario.cat/mergo v1.0.0
 	github.com/crossplane/crossplane-runtime v1.16.0
